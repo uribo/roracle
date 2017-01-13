@@ -1,0 +1,69 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+
+[![Travis-CI Build Status](https://travis-ci.org/.svg?branch=master)](https://travis-ci.org/)
+
+## Overview
+
+## Installation
+
+Install [`noti`](https://github.com/variadico/noti) using homebrew on macOS. Other platform installation guides see [noti](https://github.com/variadico/noti).
+
+```
+brew install noti
+```
+
+```{r, eval = FALSE, echo = TRUE}
+install.packages("devtools")
+devtools::install_github("uribo/roracle")
+```
+
+## Usage
+
+```{r}
+library(roracle)
+```
+
+```{r, eval = FALSE, echo = TRUE}
+# run r code with notice_status()
+notice_status(head(iris))
+
+# Using magrittr pipeline
+head(iris) %>% notice_status()
+```
+
+
+```{r, eval = FALSE, echo = TRUE}
+library(ggplot2)
+ggplot(iris, aes(Sepal.Length, Petal.Width)) +
+  geom_point() %>%
+  notice_status(paste(remoji::emoji("art"), "Finished", remoji::emoji("beer")))
+
+library(magick)
+image_read("/Users/uri/Dropbox/Documents/icons/そうむ.jpg") %>% 
+  image_scale("460x460") %>% 
+  image_annotate("Kokoro soumu ni...", 
+                 size = 40, 
+                 gravity = "northwest",
+                 color = "magenta") %>% 
+  notice_status("心そうむに、の用意ができました。")
+```
+
+
+
+- **`{ggplot2}`**
+- `source()`
+- **`{knitr}`**
+- **`{foreach}`**
+- plotly

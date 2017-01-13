@@ -1,0 +1,19 @@
+Package: roracle
+Type: Package
+Title: Notification From R
+Version: 0.0.0.9999
+Authors@R: person("Shinya", "Uryu", email = "suika1127@gmail.com", role = c("aut", "cre"))
+Maintainer: The package maintainer <yourself@somewhere.net>
+Description: More about what it does (maybe more than one line)
+    Use four spaces when indenting paragraphs within the Description.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports:
+    after,
+    evaluate,
+    magrittr,
+    remoji
+Remotes: richfitz/remoji
+SystemRequirements: noti (https://github.com/variadico/noti)
+RoxygenNote: 5.0.1
